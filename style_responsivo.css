@@ -524,7 +524,7 @@ footer {
         text-align: center;
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 720px) {
     header {
         flex-direction: column;
         align-items: stretch;
@@ -572,7 +572,80 @@ footer {
     }
 }
 
+/* === MENU HAMBURGUER === */
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 101;
+    background: none;
+    border: none;
+}
 
+.menu-hamburguer span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    margin: 4px 0;
+    background: #efb810;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Menu mobile acompanha o scroll da página */
+.menu-mobile {
+    display: none;
+    width: 100%;
+    background: #0f172a;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    z-index: 100;
+    padding: 24px 0;
+    /* Remover position: static ou qualquer position */
+}
+
+.menu-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+
+.menu-mobile ul li a {
+    color: #f9fafb;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100vw;
+    display: block;
+    transition: color 0.3s;
+}
+
+.menu-mobile ul li a:hover {
+    color: #efb810;
+}
+
+/* Mostrar menu hamburguer e esconder nav padrão em telas <= 720px */
+@media (max-width: 720px) {
+    .menu-hamburguer {
+        display: flex;
+    }
+    nav {
+        display: none !important;
+    }
+    .menu-mobile {
+        display: none; /* será ativado via JS */
+    }
+    .menu-mobile.active {
+        display: block;
+    }
+}
 
 /* === MELHORIAS DE RESPONSIVIDADE === */
 
@@ -604,7 +677,7 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .footer-links, .footer-contato, .footer-redes {
     padding: 0 16px;
     box-sizing: border-box;
@@ -615,3 +688,22 @@ footer {
 .banner-img {
   height: 420px !important; /* alterado de 380px para 420px */
 }
+
+/* Botão hamburguer fixo no topo direito */
+.menu-hamburguer.menu-hamburguer-fixo {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    background: #0f172a;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    z-index: 102;
+}
+
+/* Ajuste para não mostrar o botão em telas grandes */
+@media (min-width: 721px) {
+    .menu-hamburguer.menu-hamburguer-fixo {
+        display: none !important;
+    }
+}
+

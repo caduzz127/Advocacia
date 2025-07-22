@@ -861,33 +861,46 @@ footer {
         flex: 1 1 100%;
         max-width: 100%;
         min-width: 0;
-        padding: 0 8px;
+        padding: 0 4px;
+    }
+    .contato-form h2 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+    .contato-form p {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
     }
     .contato-form form {
-        gap: 12px;
+        gap: 8px;
     }
     .contato-form input,
     .contato-form textarea {
-        font-size: 1rem;
-        padding: 12px;
+        font-size: 0.95rem;
+        padding: 8px;
         width: 100%;
         min-width: 0;
         box-sizing: border-box;
+        border-radius: 6px;
+    }
+    .contato-form textarea {
+        min-height: 70px;
+        max-height: 120px;
     }
     .contato-form button {
         width: 100%;
-        font-size: 1.1rem;
-        padding: 14px 0;
-        border-radius: 8px;
+        font-size: 1rem;
+        padding: 10px 0;
+        border-radius: 6px;
     }
     .mapas-pequenos iframe {
         width: 100% !important;
-        height: 160px !important;
+        height: 140px !important;
         min-width: 0;
         max-width: 100%;
     }
     .mapas-pequenos {
         width: 100%;
-        padding: 0 8px;
+        padding: 0 4px;
     }
 }

@@ -562,7 +562,6 @@ main {
 }
 
 
-
 /* === FOOTER === */
 footer {
     background-color: #0f172a;
@@ -850,4 +849,45 @@ footer {
 }
 #fechar:hover {
     background-color: #e6c200; /* dourado mais escuro */
+}
+
+@media (max-width: 600px) {
+    .contato-container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+    .contato-form, .contato-mapa {
+        flex: 1 1 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 0 8px;
+    }
+    .contato-form form {
+        gap: 12px;
+    }
+    .contato-form input,
+    .contato-form textarea {
+        font-size: 1rem;
+        padding: 12px;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    .contato-form button {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 14px 0;
+        border-radius: 8px;
+    }
+    .mapas-pequenos iframe {
+        width: 100% !important;
+        height: 160px !important;
+        min-width: 0;
+        max-width: 100%;
+    }
+    .mapas-pequenos {
+        width: 100%;
+        padding: 0 8px;
+    }
 }

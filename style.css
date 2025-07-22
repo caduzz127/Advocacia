@@ -528,6 +528,7 @@ main {
     font-size: 1.1rem;
     cursor: pointer;
     transition: background 0.3s;
+    margin-bottom: 24px;
 }
 
 .contato-form button:hover {
@@ -892,6 +893,7 @@ footer {
         font-size: 1rem;
         padding: 10px 0;
         border-radius: 6px;
+        margin-bottom: 18px;
     }
     .mapas-pequenos iframe {
         width: 100% !important;
@@ -902,5 +904,24 @@ footer {
     .mapas-pequenos {
         width: 100%;
         padding: 0 4px;
+    }
+}
+
+.email-break strong {
+    display: block;
+}
+@media (max-width: 600px) {
+    .email-break {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.95rem;
+    }
+    .email-break strong {
+        margin-bottom: 2px;
+    }
+    .form-mapa-espaco {
+        height: 18px;
+        width: 100%;
+        display: block;
     }
 }

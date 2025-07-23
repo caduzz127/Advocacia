@@ -85,7 +85,7 @@
   border-radius: 50%;
 }
 /* === RESPONSIVIDADE DO FOOTER === */
-@media (max-width: 900px) {
+@media (max-width: 720px) {
   .footer-links, .footer-contato, .footer-redes, .footer-direito-programacao {
     display: inline-block;
     vertical-align: top;
@@ -190,6 +190,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
+    margin-left: 320px;
     gap: 24px;
 }
 
@@ -708,15 +709,13 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    gap: 0;
-    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
 }
+
 .contato-form, .contato-mapa {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    margin-bottom: 24px;
+    flex: 1 1 500px;
 }
 
 .contato-form h2 {
@@ -757,7 +756,6 @@ main {
     font-size: 1.1rem;
     cursor: pointer;
     transition: background 0.3s;
-    margin-bottom: 24px;
 }
 
 .contato-form button:hover {
@@ -980,220 +978,531 @@ footer {
     }
 }
 
-/* === MELHORIAS DE RESPONSIVIDADE === */
-@media (max-width: 700px) {
-  .banner-content {
+/* === BANNER === */
+.imagem-banner {
+    width: 100%;
+    position: relative;
+    background: #222;
+    min-height: 420px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    text-align: center;
-  }
+}
 
-  .banner-infos {
+.banner-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 41, 59, 0.65);
+    z-index: 1;
+}
+
+.banner-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    text-align: center;
-  }
+    width: 100%;
+    padding: 40px;
+    z-index: 2;
+}
 
-  .banner-buttons {
+.banner-infos {
+    display: flex;
     flex-direction: column;
-    gap: 8px;
-  }
+    align-items: flex-end;
+    text-align: right;
+    max-width: 400px;
+    gap: 20px;
+}
 
-  .btn-gold, .btn-outline, .cta-button {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-
-  h1, h2, h3 {
+.banner-desc {
     font-size: 1.5rem;
-  }
-  .quem-section {
-    background: #ffffff;
-    padding: 40px 8px;
-  }
-  .quem-somos-container {
+    color: white;
+    font-style: italic;
+    text-shadow: 0 2px 8px rgba(30, 41, 59, 0.25);
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-buttons {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    max-width: 100vw;
-    margin: 0 auto;
     gap: 12px;
-  }
-  .quem-somos-imagem {
-    flex: 0 0 45%;
-    max-width: 45vw;
-    min-width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .quem-somos-imagem img {
-    width: 98%;
-    max-width: 200px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    object-fit: contain;
-  }
-  .quem-somos-conteudo {
-    flex: 1 1 55%;
-    max-width: 55vw;
+}
+
+.btn-gold {
+    background: #efb810;
+    color: #222;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-gold:hover {
+    background: #d97706;
+    color: #fff;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #fff;
+    padding: 12px 28px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background: #fff;
+    color: #222;
+}
+
+/* === MAIN / ATUAÇÃO === */
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+.atuacao-section {
+    background: #f8fafc;
+    padding: 48px 0;
+}
+
+.atuacao-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.atuacao-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #22223b;
+    position: relative;
+}
+.atuacao-desc {
+   margin: 19px auto;
+   max-width: 1000px;
+   width: 100%;
+   white-space: normal;
+   overflow: visible;
+   word-break: break-word;
+   line-height: 1.8;
+   display: block;
+   text-align: center;
+}
+@media (max-width: 700px) {
+  .atuacao-desc {
+    max-width: 98vw;
+    font-size: 1rem;
+    margin: 12px auto;
     padding: 0 8px;
     text-align: left;
-    word-break: break-word;
-    overflow-wrap: break-word;
   }
 }
 
-/* === QUEM SOMOS RESPONSIVO === */
-@media (max-width: 700px) {
-    .quemsomos-imagem.desktop-only { display: none !important; }
-    .quem-somos-container {
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: center !important;
-        width: 100vw !important;
-        max-width: 100vw !important;
-    }
-    .quemsomos-imagem {
-        display: flex !important;
-        flex: 0 0 45vw !important;
-        max-width: 45vw !important;
-        min-width: 100px !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-    .quemsomos-imagem img {
-        width: 98% !important;
-        max-width: 180px !important;
-        border-radius: 12px !important;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.1) !important;
-        object-fit: contain !important;
-    }
-    .quem-somos-conteudo {
-        flex: 1 1 55vw !important;
-        max-width: 55vw !important;
-        padding: 0 8px !important;
-        text-align: left !important;
-        word-break: break-word !important;
-        overflow-wrap: break-word !important;
-    }
-    .quem-somos-titulo {
-        text-align: center !important;
-        width: 100% !important;
-    }
-    .quem-somos-texto {
-        width: 100% !important;
-        max-width: 100vw !important;
-        text-align: left !important;
-        margin: 0 auto !important;
-        word-break: break-word !important;
-        white-space: pre-line !important;
-        padding: 0 8px !important;
-    }
+.atuacao-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #efb810;
+    margin: 12px auto 0;
+    border-radius: 2px;
 }
-@media (min-width: 701px) {
-    .quemsomos-imagem.desktop-only { display: flex !important; }
-    .quem-somos-container {
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: center !important;
-        width: 100vw !important;
-        max-width: 100vw !important;
-    }
-    .quemsomos-imagem {
-        display: flex !important;
-        flex: 0 0 420px !important;
-        max-width: 420px !important;
-        min-width: 180px !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-    .quemsomos-imagem img {
-        width: 100% !important;
-        max-width: 420px !important;
-        border-radius: 12px !important;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.1) !important;
-    }
-    .quem-somos-conteudo {
-        flex: 1 1 700px !important;
-        max-width: 700px !important;
-        min-width: 0 !important;
-        padding: 0 8px !important;
-        text-align: left !important;
-        align-items: flex-start !important;
-    }
-    .quem-somos-titulo {
-        text-align: center !important;
-        width: 100% !important;
-    }
-    .quem-somos-texto {
-        width: 100% !important;
-        max-width: 100% !important;
-        text-align: left !important;
-        margin: 0 auto !important;
-        white-space: pre-line !important;
-        word-break: break-word !important;
-        padding: 0 8px !important;
-    }
+
+.atuacao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-/* === CONTATO RESPONSIVO === */
-@media (max-width: 700px) {
+.atuacao-grid a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.atuacao-box {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: left;
+    transition: all 0.3s;
+}
+.atuacao-box h3{
+    text-align: center;
+}
+.atuacao-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(30,41,59,0.15);
+}
+
+.atuacao-img-circular {
+    display: block;
+    margin: 24px auto 24px auto;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 1.5px solid #efb810;
+    background: #fff;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.atuacao-img-inner {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    background: none;
+    border-radius: 0;
+    border: none;
+}
+
+.btn-retangular {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 32px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #efb810;
+    color: #222;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-retangular:hover {
+    background: #d97706;
+    color: #fff;
+}
+
+/* === COMO TRABALHAMOS === */
+.como-trabalhamos-section {
+    background: #0f172a;
+    color: #fff;
+    text-align: center;
+    padding: 48px 0 40px 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.como-trabalhamos-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+.como-trabalhamos-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+}
+.como-trabalhamos-desc {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.como-trabalhamos-btn-area {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.como-trabalhamos-btn {
+    display: inline-block;
+    background: #d4af37;
+    color: #0f172a;
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+.como-trabalhamos-btn:hover {
+    background: #ffd700;
+}
+.como-trabalhamos-direitos {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 32px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+.como-trabalhamos-bold {
+    font-weight: bold;
+    color: #ffd700;
+}
+.como-trabalhamos-list {
+    background: #14305b;
+    border-radius: 8px;
+    padding: 18px 28px;
+    color: #fff;
+    font-size: 1.08rem;
+    margin-bottom: 18px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: disc inside;
+}
+.como-trabalhamos-citacao {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #ffd700;
+    padding-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* === SOBRE === */
+.quem-section {
+    background-color: #f8fafc;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.quem-somos-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+.quemsomos-imagem img {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(30, 41, 59, 0.15);
+    border: 4px solid #efb810;
+}
+
+.quem-somos-conteudo {
+    flex: 1;
+    color: #0f172a;
+}
+
+.quem-somos-conteudo h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #22223b;
+    position: relative;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.quem-somos-conteudo h2::after {
+    content: "";
+    display:block;
+    width: 110px;
+    height: 4px;
+    background: #efb810;
+    margin: 12px 0 0 0;
+    border-radius: 15px;
+}
+.quem-somos-conteudo p {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: #1e293b;
+}
+
+/* === CONTATO === */
+.contato-section {
+    background: #f8fafc;
+    padding: 60px 20px;
+}
+
+.contato-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.contato-form, .contato-mapa {
+    flex: 1 1 500px;
+}
+
+.contato-form h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+.contato-form p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contato-form input, 
+.contato-form textarea {
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.contato-form button {
+    background: #efb810;
+    color: #0f172a;
+    font-weight: bold;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contato-form button:hover {
+    background: #d97706;
+    color: white;
+}
+
+.contato-mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.mapas-pequenos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}   
+.mapas-pequenos iframe {
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
     .contato-container {
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100vw !important;
-        max-width: 100vw !important;
-    }
-    .contato-form, .contato-mapa {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin: 0 auto !important;
-        padding: 0 8px !important;
-        box-sizing: border-box !important;
-    }
-    .contato-form input, .contato-form textarea, .contato-form button {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        box-sizing: border-box !important;
-    }
-    .mapas-pequenos iframe {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        min-width: 0 !important;
+        flex-direction: column;
     }
 }
-@media (min-width: 701px) {
+
+/* Alinhar formulário à esquerda e mapa à direita, igual ao index.html */
+@media (min-width: 900px) {
     .contato-container {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        width: 100vw !important;
-        max-width: 100vw !important;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+        width: 100%;
     }
     .contato-form {
-        order: 1 !important;
-        width: 100% !important;
-        max-width: 100vw !important;
-        min-width: 0 !important;
-        margin-bottom: 24px !important;
+        flex: 1 1 480px;
+        max-width: 480px;
+        min-width: 340px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 12px;
+        box-sizing: border-box;
+        background: #f7f7f7;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.06);
     }
     .contato-mapa {
-        order: 2 !important;
-        width: 100% !important;
-        max-width: 100vw !important;
-        min-width: 0 !important;
-        margin-bottom: 0 !important;
+        flex: 1 1 480px;
+        max-width: 480px;
+        min-width: 340px;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0 12px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .contato-form input, .contato-form textarea, .contato-form button {
-        width: 100% !important;
-        max-width: 100vw !important;
-        box-sizing: border-box !important;
+    .contato-mapa iframe {
+        width: 100%;
+        height: 300px;
+        max-width: 100%;
+        border-radius: 12px;
     }
-    .mapas-pequenos iframe {
-        width: 100% !important;
-        max-width: 100vw !important;
-        min-width: 0 !important;
+    .contato-form form {
+        width: 100%;
     }
+    .contato-form input,
+    .contato-form textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 12px;
+    }
+    .contato-form button {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+
+/* Evita que o form ultrapasse a tela em qualquer resolução */
+.contato-form,
+.contato-mapa {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 480px;
+    min-width: 0;
+    margin: 0 auto 24px auto;
+}
+
+.contato-form form {
+    width: 100%;
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+
+.contato-form button {
+    width: 100%;
+    margin-bottom: 24px;
 }
 
 /* === MODAL DE SUCESSO CONTATO === */

@@ -339,7 +339,7 @@ nav a:hover {
     }
     .contato-form, .contato-mapa {
         flex: 1 1 100%;
-        max-width: 100vw;
+        max-width: 100%;
         min-width: 0;
         padding: 0 4px;
         box-sizing: border-box;
@@ -763,6 +763,13 @@ main {
     color: white;
 }
 
+.contato-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+
 .contato-mapa iframe {
     width: 100%;
     height: 100%;
@@ -786,9 +793,48 @@ main {
 @media (max-width: 900px) {
     .contato-container {
         flex-direction: column;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+    }
+    .contato-form, .contato-mapa {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0 8px; /* aumenta o padding para evitar encostar na borda */
+        box-sizing: border-box;
+        height: auto;
+        display: block;
+    }
+    .contato-form form {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    .contato-form input,
+    .contato-form textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    .contato-form button {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .contato-mapa iframe {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 300px;
+        height: 300px;
+        border-radius: 12px;
+        box-sizing: border-box;
     }
 }
-
 
 /* === FOOTER === */
 footer {
@@ -1381,6 +1427,13 @@ main {
     color: white;
 }
 
+.contato-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+
 .contato-mapa iframe {
     width: 100%;
     height: 100%;
@@ -1404,7 +1457,221 @@ main {
 @media (max-width: 900px) {
     .contato-container {
         flex-direction: column;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
     }
+    .contato-form, .contato-mapa {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0 8px; /* aumenta o padding para evitar encostar na borda */
+        box-sizing: border-box;
+        height: auto;
+        display: block;
+    }
+    .contato-form form {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    .contato-form input,
+    .contato-form textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    .contato-form button {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .contato-mapa iframe {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 300px;
+        height: 300px;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+}
+
+/* === FOOTER === */
+footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    padding: 40px 0 0 0;
+    border-top: 2px solid #efb810;
+    margin-top: 60px;
+    font-size: 1rem;
+    text-align: center;
+}
+.footer-links, .footer-contato, .footer-redes {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    min-width: 220px;
+    margin: 0 16px 32px 16px;
+    text-align: center;
+}
+.footer-links h3, .footer-contato h3, .footer-redes h3 {
+    color: #efb810;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    font-family: 'Merriweather', serif;
+}
+.footer-contato h2 {
+    color: #efb810;
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+}
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+.footer-links a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #efb810;
+}
+.footer-contato p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+.footer-redes a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: inline-block;
+    transition: color 0.2s;
+}
+.footer-redes a:hover {
+    color: #efb810;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 18px 0 0 0;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    background: none;
+}
+.footer-bottom a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.footer-bottom a:hover {
+    color: #efb810;
+    text-decoration: none;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 900px) {
+    .footer-links, .footer-contato, .footer-redes {
+        display: block;
+        width: 100%;
+        margin: 0 0 24px 0;
+    }
+    .footer-links ul {
+        text-align: center;
+    }
+}
+@media (max-width: 720px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 4vw;
+        gap: 0;
+        min-height: 60px;
+        position: relative;
+    }
+    .logo-titulo {
+        justify-content: flex-start;
+        width: auto;
+        margin-bottom: 0;
+    }
+    .logo-titulo img {
+        height: 32px;
+    }
+    .logo-titulo h1 {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    .cta-button {
+        width: auto;
+        margin-top: 0;
+        padding: 7px 12px;
+        font-size: 0.90rem;
+        border-radius: 6px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
+    }
+    nav {
+        display: none !important;
+    }
+    .menu-hamburguer {
+        display: flex;
+    }
+    .menu-mobile {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #0f172a;
+        width: 220px;
+        height: 100vh;
+        border-radius: 0 0 0 12px;
+        box-shadow: -2px 0 16px rgba(0,0,0,0.12);
+        z-index: 999;
+        padding-top: 70px;
+    }
+    .menu-mobile.active {
+        display: block !important;
+    }
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        list-style: none;
+        padding: 16px 0;
+        margin: 0;
+    }
+    .menu-mobile li {
+        margin-bottom: 12px;
+    }
+    .menu-mobile a {
+        color: #ffd700;
+        text-decoration: none;
+        font-size: 1.1rem;
+        padding: 8px 18px;
+        display: block;
+        border-radius: 6px;
+        transition: background 0.2s;
+        text-align: left;
+    }
+    .menu-mobile a:hover {
+        background: #22223b;
+    }
+    .footer-links, .footer-contato, .footer-redes {
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+    
 }
 
 /* === MODAL DE SUCESSO CONTATO === */
@@ -1585,5 +1852,3 @@ body {
 .btn:hover {
   background-color: #3749a3;
 }
-
-

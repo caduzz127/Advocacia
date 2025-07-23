@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleCardoso.css">
     <link rel="icon" href="logo.jpg" type="image/jpeg">
 </head>
 
@@ -22,7 +22,16 @@
                 <h1>FR RIBAS</h1>
             </a>
         </div>
-        <a class="cta-button" href="https://wa.me/5521986470528?text=Olá%2C+gostaria+de+saber+mais+sobre+os+serviços" id="ctaButtonHeader">Atendimento aqui</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#quem-somos">Quem somos</a></li>
+                <li><a href="#servicos">Área de atuação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <a class="cta-button" href="https://wa.me/5521986470528?text=Olá%2C+gostaria+de+saber+mais+sobre+os+serviços"
+            id="ctaButtonHeader">Atendimento aqui</a>
         <div class="menu-hamburguer" id="menuHamburguer">
             <span></span>
             <span></span>
@@ -59,8 +68,12 @@
             </div>
             <div class="quem-somos-conteudo">
                 <h2 class="quem-somos-titulo atuacao-title">QUEM SOMOS</h2>
-                <p class="quem-somos-texto quem-somos-destaque">Felipe Ribas Advocacia é um escritório jurídico comprometido com a excelência, atuando com ética, transparência e dedicação para oferecer soluções personalizadas aos nossos clientes. 
-Com uma equipe de advogados especializados em diversas áreas do direito, combinamos experiência, inovação e estratégia para defender os interesses de pessoas físicas e jurídicas com máxima eficiência.</p>
+                <p class="quem-somos-texto quem-somos-destaque">Felipe Ribas Advocacia é um escritório jurídico
+                    comprometido com a excelência, atuando com ética, transparência e dedicação para oferecer soluções
+                    personalizadas aos nossos clientes.
+                    Com uma equipe de advogados especializados em diversas áreas do direito, combinamos experiência,
+                    inovação e estratégia para defender os interesses de pessoas físicas e jurídicas com máxima
+                    eficiência.</p>
             </div>
         </div>
     </section>
@@ -72,7 +85,8 @@ Com uma equipe de advogados especializados em diversas áreas do direito, combin
             <div class="atuacao-header">
                 <h2 class="atuacao-title">ÁREA DE ATUAÇÃO</h2>
                 <p class="atuacao-desc">
-                 Advogado com ênfase na defesa do Trabalhador - em especial nos casos de Acidente e Doença do Trabalho - e também:
+                    Advogado com ênfase na defesa do Trabalhador - em especial nos casos de Acidente e Doença do
+                    Trabalho - e também:
             </div>
             <div class="atuacao-grid">
 
@@ -125,8 +139,11 @@ Com uma equipe de advogados especializados em diversas áreas do direito, combin
             <div class="como-trabalhamos-container">
                 <h2 class="como-trabalhamos-title">Como Trabalhamos?</h2>
                 <p class="como-trabalhamos-desc"> Problemas com seus Direitos? Não fique no Prejuízo!<br>
-                  Escritório de advocacia especializado em Direito do Trabalhador:<br>horas extras, reconhecimento de vínculo<br>(trabalho sem anotação na carteira de trabalho),desvio de função, responsabilidade civil (acidente e doença do trabalho).
-                </p></p>
+                    Escritório de advocacia especializado em Direito do Trabalhador:<br>horas extras, reconhecimento de
+                    vínculo<br>(trabalho sem anotação na carteira de trabalho),desvio de função, responsabilidade civil
+                    (acidente e doença do trabalho).
+                </p>
+                </p>
                 <div class="como-trabalhamos-btn-area">
                     <a href="#contato" class="como-trabalhamos-btn">QUERO FALAR COM O ADVOGADO</a>
                 </div>
@@ -138,9 +155,10 @@ Com uma equipe de advogados especializados em diversas áreas do direito, combin
 
         <section id="contato" class="contato-section">
             <div class="contato-container">
+                <!-- Formulário à esquerda -->
                 <div class="contato-form">
                     <h2>Entre em contato</h2>
-                    <p class="email-break"><strong>Email:</strong> advfeliperibas@gmail.com</p>
+                    <p><strong>Email:</strong> advfeliperibas@gmail.com</p>
                     <form id="meuFormulario" action="https://formsubmit.co/advfeliperibas@gmail.com"
                         method="POST">
                         <input type="text" name="name" placeholder="Nome:" required>
@@ -151,21 +169,21 @@ Com uma equipe de advogados especializados em diversas áreas do direito, combin
                         <button type="submit">Enviar</button>
                     </form>
                 </div>
-                <div id="modal">
-                    <div id="modal-content">
-                        <h3>Sucesso!</h3>
-                        <p>Email enviado com sucesso!</p>
-                        <button id="fechar">Fechar</button>
-                    </div>
-                </div>
+                <!-- Mapa à direita -->
                 <div class="contato-mapa">
-                    <div class="mapas-pequenos">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.408648865922!2d-43.56133888447666!3d-22.86490462537933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99636ff63d2f6d%3A0x6208f404eb51e949!2sRua%20Campo%20Grande%2C%201014%20-%20Sala%20526%20-%20Campo%20Grande%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2023080-000!5e0!3m2!1spt-BR!2sbr!4v1721618000000!5m2!1spt-BR!2sbr"
-                            width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.408648865922!2d-43.56133888447666!3d-22.86490462537933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99636ff63d2f6d%3A0x6208f404eb51e949!2sRua%20Campo%20Grande%2C%201014%20-%20Sala%20526%20-%20Campo%20Grande%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2023080-000!5e0!3m2!1spt-BR!2sbr!4v1721618000000!5m2!1spt-BR!2sbr"
+                        width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            <!-- Modal fora do container -->
+            <div id="modal">
+                <div id="modal-content">
+                    <h3>Sucesso!</h3>
+                    <p>Email enviado com sucesso!</p>
+                    <button id="fechar">Fechar</button>
                 </div>
             </div>
         </section>
@@ -177,7 +195,7 @@ Com uma equipe de advogados especializados em diversas áreas do direito, combin
         <div class="footer-links">
             <h3>Navegação</h3>
             <ul>
-               <li><a href="#home">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#quem-somos">Quem somos</a></li>
                 <li><a href="#servicos">Área de atuação</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -202,11 +220,12 @@ Com uma equipe de advogados especializados em diversas áreas do direito, combin
         <div class="footer-direito-programacao">
             <h3>Direito de Programação</h3>
             <p>Este site foi desenvolvido por @CaduDev e @Zerodoisdev.<br>
-            Todos os direitos de programação reservados.<br></p>
+                Todos os direitos de programação reservados.<br></p>
         </div>
 
         <div class="footer-bottom">
-            <a href="https://www.instagram.com/advfeliperibas?utm_source=ig_web_button_share_sheet&igsh=MXRxdTM4M3MwY3VpOQ==">
+            <a
+                href="https://www.instagram.com/advfeliperibas?utm_source=ig_web_button_share_sheet&igsh=MXRxdTM4M3MwY3VpOQ==">
                 <p>Instagram</p>
             </a>
             <a href="#">Política de Privacidade</a>
@@ -227,8 +246,8 @@ Com uma equipe de advogados especializados em diversas áreas do direito, combin
                 menuMobile.classList.remove("active");
             });
             // Fecha menu ao clicar em link
-            document.querySelectorAll('.menu-mobile a').forEach(function(a){
-                a.addEventListener('click', function(){
+            document.querySelectorAll('.menu-mobile a').forEach(function (a) {
+                a.addEventListener('click', function () {
                     menuMobile.classList.remove('active');
                 });
             });

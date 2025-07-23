@@ -11,9 +11,6 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        
-    </style>
     <link rel="icon" href="logo.jpg" type="image/jpeg">
 </head>
 
@@ -56,13 +53,14 @@
         </div>
     </div>
     <section id="quem-somos" class="quem-section">
-        <div class="quem-somos-container" style="display: flex; flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap; width: 100vw; max-width: 100vw; gap: 0;">
-            <div class="quemsomos-imagem" style="flex: 0 0 40%; max-width: 40vw; min-width: 120px; display: flex; justify-content: center; align-items: center;">
-                <img src="fotofeliperibas.jpg" alt="Dr. Felipe Ribas" style="width: 90%; max-width: 180px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+        <div class="quem-somos-container">
+            <div class="quemsomos-imagem desktop-only">
+                <img src="fotofeliperibas.jpg" alt="Dr. Felipe Ribas">
             </div>
-            <div class="quem-somos-conteudo" style="flex: 1 1 60%; max-width: 60vw; padding: 0 8px; display: flex; flex-direction: column; justify-content: flex-start; align-items: center;">
-                <h2 class="quem-somos-titulo atuacao-title" style="width: 100%; text-align: center; margin-bottom: 12px;">QUEM SOMOS</h2>
-                <p class="quem-somos-texto quem-somos-destaque" style="width: 100%; text-align: center; text-align-last: center; white-space: normal; word-break: break-word; line-height: 1.8; margin: 0 auto;">Felipe Ribas Advocacia é um escritório jurídico comprometido com a excelência, atuando com ética, transparência e dedicação para oferecer soluções personalizadas aos nossos clientes. Com uma equipe de advogados especializados em diversas áreas do direito, combinamos experiência, inovação e estratégia para defender os interesses de pessoas físicas e jurídicas com máxima eficiência.</p>
+            <div class="quem-somos-conteudo">
+                <h2 class="quem-somos-titulo atuacao-title">QUEM SOMOS</h2>
+                <p class="quem-somos-texto quem-somos-destaque">Felipe Ribas Advocacia é um escritório jurídico comprometido com a excelência, atuando com ética, transparência e dedicação para oferecer soluções personalizadas aos nossos clientes. 
+Com uma equipe de advogados especializados em diversas áreas do direito, combinamos experiência, inovação e estratégia para defender os interesses de pessoas físicas e jurídicas com máxima eficiência.</p>
             </div>
         </div>
     </section>
@@ -139,19 +137,18 @@
         </section>
 
         <section id="contato" class="contato-section">
-            <div class="contato-container" style="display: flex; flex-direction: column; width: 100vw; max-width: 100vw; margin: 0; gap: 0;">
-                <!-- Formulário -->
-                <div class="contato-form" style="width: 100vw; max-width: 100vw; min-width: 0; padding: 0 4px; box-sizing: border-box;">
-                    <h2 style="text-align: center;">Entre em contato</h2>
-                    <p class="email-break" style="text-align: center;"><strong>Email:</strong> advfeliperibas@gmail.com</p>
+            <div class="contato-container">
+                <div class="contato-form">
+                    <h2>Entre em contato</h2>
+                    <p class="email-break"><strong>Email:</strong> advfeliperibas@gmail.com</p>
                     <form id="meuFormulario" action="https://formsubmit.co/advfeliperibas@gmail.com"
-                        method="POST" style="width: 100vw; max-width: 100vw;">
-                        <input type="text" name="name" placeholder="Nome:" required style="width: 100vw; max-width: 100vw;">
-                        <input type="email" name="email" placeholder="E-mail:" required style="width: 100vw; max-width: 100vw;">
-                        <input name="telefone" type="text" placeholder="Telefone:" required style="width: 100vw; max-width: 100vw;">
-                        <textarea name="message" id="" placeholder="Mensagem:" required style="width: 100vw; max-width: 100vw;"></textarea>
+                        method="POST">
+                        <input type="text" name="name" placeholder="Nome:" required>
+                        <input type="email" name="email" placeholder="E-mail:" required>
+                        <input name="telefone" type="text" placeholder="Telefone:" required>
+                        <textarea name="message" id="" placeholder="Mensagem:" required></textarea>
                         <input type="hidden" name="_captcha" value="false">
-                        <button type="submit" style="width: 100vw; max-width: 100vw;">Enviar</button>
+                        <button type="submit">Enviar</button>
                     </form>
                 </div>
                 <div id="modal">
@@ -161,12 +158,11 @@
                         <button id="fechar">Fechar</button>
                     </div>
                 </div>
-                <!--Mapa -->
-                <div class="contato-mapa" style="width: 100vw; max-width: 100vw; min-width: 0; padding: 0 4px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;">
-                    <div class="mapas-pequenos" style="width: 100vw; height: 100%; display: flex; align-items: center; justify-content: center;">
+                <div class="contato-mapa">
+                    <div class="mapas-pequenos">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.408648865922!2d-43.56133888447666!3d-22.86490462537933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99636ff63d2f6d%3A0x6208f404eb51e949!2sRua%20Campo%20Grande%2C%201014%20-%20Sala%20526%20-%20Campo%20Grande%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2023080-000!5e0!3m2!1spt-BR!2sbr!4v1721618000000!5m2!1spt-BR!2sbr"
-                            width="100vw" height="220" style="border:0; min-width: 0; max-width: 100vw;" allowfullscreen="" loading="lazy"
+                            width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>

@@ -411,21 +411,6 @@ nav a:hover {
     gap: 12px;
 }
 
-.btn-gold {
-    background: #efb810;
-    color: #222;
-    padding: 12px 28px;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.btn-gold:hover {
-    background: #d97706;
-    color: #fff;
-}
-
 .btn-outline {
     background: transparent;
     color: #fff;
@@ -435,11 +420,17 @@ nav a:hover {
     font-weight: bold;
     text-decoration: none;
     transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-outline:hover {
     background: #fff;
     color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* === MAIN / ATUAÇÃO === */
@@ -559,10 +550,16 @@ main {
     border: none;
     cursor: pointer;
     transition: background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .btn-retangular:hover {
     background: #d97706;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* === COMO TRABALHAMOS === */
@@ -609,9 +606,15 @@ main {
     text-decoration: none;
     margin-top: 8px;
     transition: background 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .como-trabalhamos-btn:hover {
     background: #ffd700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .como-trabalhamos-direitos {
     background: #0f172a;
@@ -1083,27 +1086,17 @@ footer {
     font-weight: bold;
     text-decoration: none;
     transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-gold:hover {
     background: #d97706;
     color: #fff;
-}
-
-.btn-outline {
-    background: transparent;
-    color: #fff;
-    padding: 12px 28px;
-    border: 2px solid #fff;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.btn-outline:hover {
-    background: #fff;
-    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* === MAIN / ATUAÇÃO === */
@@ -1211,24 +1204,6 @@ main {
     border: none;
 }
 
-.btn-retangular {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 32px;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    background: #efb810;
-    color: #222;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.btn-retangular:hover {
-    background: #d97706;
-    color: #fff;
-}
-
 /* === COMO TRABALHAMOS === */
 .como-trabalhamos-section {
     background: #0f172a;
@@ -1273,9 +1248,15 @@ main {
     text-decoration: none;
     margin-top: 8px;
     transition: background 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .como-trabalhamos-btn:hover {
     background: #ffd700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .como-trabalhamos-direitos {
     background: #0f172a;
@@ -1847,6 +1828,9 @@ body {
   font-weight: bold;
   transition: background-color 0.3s;
   display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn:hover {
